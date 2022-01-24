@@ -41,3 +41,28 @@ test('check if first element in array >= 1', () => {
 test('check if first element in array <= 3', () => {
     expect(allData[0]).toBeLessThanOrEqual(3)
 })
+
+test('check if first element in array is not defined', () => {
+    expect(allData[0]).not.toBeUndefined()
+})
+
+test('check for substring in a string', () => {
+    let str = 'hello world'
+    expect(str).toMatch(/world/)
+})
+
+test('check for a property in object', () => {
+    let obj = {
+        name : 'sam',
+        age : 80
+    }
+    expect(obj).toHaveProperty('age')
+})
+
+test('check for property age is 80', () => {
+    let obj = {
+        name : 'sam',
+        age : 80
+    }
+    expect(obj).toHaveProperty('age',80)
+})
