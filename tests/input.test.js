@@ -1,6 +1,6 @@
 const input = require('../input')
 
-describe('validate the input field', () => {
+describe.skip('validate the input field', () => {
     test('name empty', () => {
         expect(input()).toBe('Unknown')
     })

@@ -66,3 +66,24 @@ test('check for property age is 80', () => {
     }
     expect(obj).toHaveProperty('age',80)
 })
+
+expect.extend({
+    toBeBT(recived , target){
+        const pass = recived > target
+        if(pass){
+            return {
+                message : () => `Expected ${recived} > &{target}`,
+                pass : true
+            }
+        }else{
+            return {
+                message : () => `Expected ${recived} > &{target}`,
+                pass : false
+            }
+        }
+    }
+})
+
+test('ceck if num > num 2', () => {
+    expect(10).toBeBT(80)
+})

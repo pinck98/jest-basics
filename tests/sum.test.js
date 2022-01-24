@@ -7,7 +7,7 @@ const sum = require('../sum')
 // test.only(name , function , timeout) //*skip all tests just do this
 // test.skip(name , function , timeout) //*skip this
 
-describe('scheck nums sum', () => {
+describe.skip('scheck nums sum', () => {
     test.only('return 0', () => {
         expect(sum()).toBe(0)
     })
