@@ -14,6 +14,9 @@
   },
   "jest" : {
     "collectCoverage" : true,
-    "coverageReporters" : ["html"]
+    "coverageReporters" : ["html"],
+    "collectCoverageFrom" : ["**/*.{js,jsx,ts}"],
+    "coverageDirectory" : "reports",
+    "coveragePathIgnorePatterns" : ["/node_modules/","/reports/"]
   }
 }
