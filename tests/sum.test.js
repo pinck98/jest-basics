@@ -4,7 +4,6 @@ const sum = require('../sum')
 // it(name , function , timeout)
 // describe(name ,function) //*not required
 
-
 describe('scheck nums sum', () => {
     test('return 0', () => {
         expect(sum()).toBe(0)
