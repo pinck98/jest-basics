@@ -21,3 +21,23 @@ test('check if array contains num 0', () => {
 test('check if array not contains num 10', () => {
     expect(allData).not.toContain(10)
 })
+
+test('check if array contains string', () => {
+    for(let i; i < allData.length; i++){
+        expect(isNaN(allData[i])).toBe(false)
+    }
+})
+
+test('check if array contains string (methode 2)', () => {
+    for(let i; i < allData.length; i++){
+        expect(isNaN(allData[i])).toBeFalsy()
+    }
+})
+
+test('check if first element in array >= 1', () => {
+    expect(allData[0]).toBeGreaterThanOrEqual(1)
+})
+
+test('check if first element in array <= 3', () => {
+    expect(allData[0]).toBeLessThanOrEqual(3)
+})
