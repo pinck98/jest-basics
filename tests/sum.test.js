@@ -18,3 +18,7 @@ test('return num 1 + num 2', () => {
 test('return num 1 + num 2 + num3', () => {
     expect(sum(3,10,10)).toBe(23)
 })
+
+test('return the sum', () => {
+    expect(sum(3,10,10,3,10,190)).toBe(226)
+})
