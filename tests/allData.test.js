@@ -85,5 +85,26 @@ expect.extend({
 })
 
 test('ceck if num > num 2', () => {
-    expect(10).toBeBT(80)
+    expect(10).toBeBT(8)
+})
+
+expect.extend({
+    toBeBetween(recived , start, end){
+        const pass = recived > start && recived < end
+        if(pass){
+            return {
+                message : () => `Expected ${recived} to be between ${start} and ${end}`,
+                pass : true
+            }
+        }else{
+            return {
+                message : () => `Expected ${recived} to be between ${start} and ${end}`,
+                pass : false
+            }
+        }
+    }
+})
+
+test('check if num between 2 nums',() => {
+    expect(10).toBeBetween(2,19)
 })
