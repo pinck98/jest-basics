@@ -108,3 +108,16 @@ expect.extend({
 test('check if num between 2 nums',() => {
     expect(10).toBeBetween(2,19)
 })
+
+test('expect anything => any value != null || undefined', () => {
+    expect('test').toEqual(expect.anything())
+})
+
+test('expect any constructor', () => {
+    expect('test').toEqual(expect.any(String))
+})
+
+test('expect array containing', () => {
+    let arr = [1,2,3,4]
+    expect(arr).toEqual(expect.arrayContaining([1,2,4]))
+})
