@@ -3,9 +3,12 @@ const sum = require('../sum')
 // test(name , function , timeout)
 // it(name , function , timeout)
 // describe(name ,function) //*not required
+// describe.only(name ,function) //*skip all describes just do this
+// test.only(name , function , timeout) //*skip all tests just do this
+// test.skip(name , function , timeout) //*skip this
 
 describe('scheck nums sum', () => {
-    test('return 0', () => {
+    test.only('return 0', () => {
         expect(sum()).toBe(0)
     })
 
